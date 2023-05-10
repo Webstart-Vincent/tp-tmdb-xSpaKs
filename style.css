@@ -1,0 +1,182 @@
+body {
+    background-color: black;
+    min-width: 350px;
+    margin: 40px;
+}
+
+a {
+    all: unset;
+    cursor: pointer;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    height: 162px;
+}
+
+.logo {
+    width: 150px;
+}
+
+.icone {
+    display: none;
+}
+
+.title {
+    color: white;
+
+    font-family: "Overlock", sans-serif;
+    font-size: 50px;
+    font-weight: 800;
+
+    margin: 0;
+    padding-top: 50px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.propos {
+    padding-top: 20px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: end;
+    gap: 30px;
+}
+
+.propos a {
+    color: white;
+    font-family: "Overlock";
+    font-size: 20px;
+    font-weight: 300;
+    white-space: nowrap;
+}
+
+.burger {
+    display: none;
+}
+
+.affiche {
+    max-width: 960px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 0;
+}
+
+.slides-container {
+    display: flex;
+    transition: ease-out 0.3s;
+}
+
+section {
+    width: 100%;
+    flex-shrink: 0;
+
+    display: grid;
+    align-items: center;
+}
+
+.container {
+    margin: auto;
+}
+
+.bi-chevron-left {
+    left: 15px;
+}
+.bi-chevron-right {
+    right: 15px;
+}
+
+.bi-chevron-left,
+.bi-chevron-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background-color: white;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    font-size: 34px;
+    cursor: pointer;
+}
+
+.decouvrir {
+    background-color: white;
+    color: black;
+
+    font-weight: 800;
+    font-family: "Overlock", sans-serif;
+
+    width: 220px;
+    height: 50px;
+
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.decouvrir a {
+    font-size: 20px;
+    line-height: 45px;
+}
+
+@media (max-width: 700px) {
+    body {
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .header {
+        padding: 5px;
+        height: 110px;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+    .logo,
+    .propos_container {
+        display: none;
+    }
+
+    .icone,
+    .burger {
+        display: block;
+    }
+
+    .icone {
+        padding: 3px 0px 0px 10px;
+    }
+
+    .burger {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .burger img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .container,
+    .container img {
+        width: 100% !important;
+    }
+
+    .bi-chevron-left,
+    .bi-chevron-right {
+        display: none !important;
+    }
+}

@@ -1,0 +1,281 @@
+body {
+    background-color: black;
+    margin: 0px;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+p {
+    color: white;
+    margin: 0;
+}
+
+.header {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    position: absolute;
+}
+
+.icone {
+    display: none;
+}
+
+.logo,
+.icone {
+    padding: 10px 0px 0px 10px;
+    z-index: 4;
+}
+
+.logo {
+    width: 150px;
+    padding-left: 30px;
+}
+
+.propos {
+    padding-right: 25px;
+    padding-top: 30px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: end;
+    gap: 30px;
+}
+
+.propos a {
+    color: white;
+    font-family: "Overlock";
+    font-size: 20px;
+    font-weight: lighter;
+    white-space: nowrap;
+}
+
+.burger {
+    display: none;
+    z-index: 4;
+}
+
+.info {
+    margin: 20px 130px;
+}
+
+.bande-annonce {
+    position: relative;
+}
+
+.bande-annonce img {
+    width: 100%;
+}
+
+.img-container {
+    position: relative;
+}
+
+.img-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0) 50%,
+        rgb(0, 0, 0) 100%
+    );
+    z-index: 2;
+}
+
+.img-container img {
+    position: relative;
+    z-index: 1;
+    mask-image: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 0) 100%
+    );
+}
+
+.bande-annonce-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    position: absolute;
+    background-color: black;
+    opacity: 90%;
+    height: 25%;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    z-index: 3;
+
+    transform: translate(0, -100%);
+}
+
+.bande-annonce-info p {
+    color: white;
+}
+
+.ba-info {
+    margin: 10px;
+}
+
+.ba-info p {
+    font-family: "Yantramanav", sans-serif;
+    white-space: nowrap;
+}
+
+.ba-titre {
+    font-family: "Overlock", sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    padding-bottom: 40%;
+
+    text-align: center;
+}
+
+.visionner {
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    padding: 8px;
+    margin: 10px;
+    text-align: center;
+    min-width: 110px;
+    max-width: 160px;
+}
+
+.categorie {
+    font-family: "Overlock", sans-serif;
+    font-weight: 600;
+
+    color: black;
+    text-align: center;
+    background-color: #d9d9d9;
+    height: 40px;
+    line-height: 40px;
+}
+
+.synopsis {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.synopsis > p {
+    font-family: "Yantramanav", sans-serif;
+    align-self: center;
+}
+
+.synopsis_buttons {
+    justify-self: self-end;
+    padding-right: 20px;
+}
+
+.synopsis_button {
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    min-width: 110px;
+    max-width: 175px;
+}
+
+.synopsis_button a {
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    white-space: nowrap;
+
+    color: black;
+}
+
+.acteurs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.acteur p {
+    font-family: "Yantramanav", sans-serif;
+    padding-left: 1px;
+}
+
+.nom {
+    font-size: 17px;
+}
+
+.role {
+    font-size: 16px;
+}
+
+@media (max-width: 700px) {
+    body {
+        min-width: 360px;
+    }
+
+    .logo,
+    .propos_container {
+        display: none;
+    }
+
+    .icone,
+    .burger {
+        display: block;
+    }
+
+    .burger {
+        margin-left: auto;
+        padding-right: 30px;
+    }
+
+    .burger img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .bande-annonce {
+        margin: 0;
+    }
+
+    .bande-annonce-info {
+        height: 37%;
+    }
+
+    .ba-titre {
+        font-size: 20px;
+        padding-bottom: 60%;
+    }
+    .synopsis {
+        display: block;
+        margin: 20px;
+    }
+
+    .synopsis > p {
+        padding-bottom: 30px;
+    }
+
+    .synopsis_buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0;
+        justify-items: center;
+    }
+
+    .casting {
+        margin: 20px;
+    }
+
+    .acteurs {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        gap: 30px;
+    }
+
+    .acteur {
+        padding-bottom: 0px;
+    }
+
+    .acteur p {
+        white-space: nowrap;
+    }
+}
